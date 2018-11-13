@@ -1,0 +1,164 @@
+.attribution img{
+    width: 10%;
+
+}
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.modal {
+    transform: translateY(-400%);
+    position: fixed;
+    width: 500px;
+    height: 280px;
+    z-index: 200;
+    top: calc((100% - 280px)/2);
+    left: calc((100% - 500px)/2);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #555;
+    background-color: #eee;
+
+}
+
+
+/* use these class names to show or hide the overlay and modal window */
+.show{
+    display: block;
+}
+.hide {
+    display: none;
+}
+.off{
+
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: exitscreen;
+    animation-fill-mode: forwards;
+}
+.on{
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: enterscreen;
+    animation-fill-mode: forwards;
+}
+
+@keyframes enterscreen{
+    0%{
+        transform: translateY(-400%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes exitscreen{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(400%);
+    }
+}
+.cancelButton,
+.saveButton{
+    width: 120px;
+    position: absolute;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem 2rem;
+    font-size: 1rem;
+}
+
+.saveButton{
+    bottom: 1rem;
+    right: 4rem;
+}
+
+.cancelButton{
+    bottom: 1rem;
+    left: 4rem;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color:blue;
+    color: white;
+    text-align: center;
+}
+
+.modal-radio{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+*{
+    max-width: 1500px;
+}
+main{
+
+}
+.search{
+    border: 2px red solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+#back-button{
+}
+#search-input{
+    width: 15;
+    height: 29px;
+    text-align: center;
+}
+#search-input:hover{
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: searchscale;
+}
+@keyframes searchscale{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(20%);
+    }
+}
+#modalButton{
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
