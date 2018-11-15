@@ -31,8 +31,12 @@ function addEventListeners(){
         saveLocalStorageData();
     });
     document.querySelector("#search-button").addEventListener("click", function (){
-        let inputSearch = document.querySelector
+        document.querySelector(".recommendations").innerHTML = "Results 1-20 from a total of " + "some variable" +" for " + "another vairable";
+        document.querySelector(".search").style.translate= "translateY(-330px)";
+
+
     });
+
 }
 
 function saveLocalStorageData() {

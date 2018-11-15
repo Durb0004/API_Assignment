@@ -1,7 +1,3 @@
-.attribution img{
-    width: 10%;
-
-}
 
 
 .overlay{
@@ -108,44 +104,67 @@
     max-width: 1500px;
 }
 main{
-
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 500px;
+    width: 80%;
+    margin: 100px auto 0 auto;
 }
 .search{
-    border: 2px red solid;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.inputs{
+        display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px;
-}
+    margin-bottom: 15%;
 
+}
+.recommendations{
+    margin-bottom: 15%;
+}
 #back-button{
 }
 #search-input{
-    width: 15;
+    width: 25%;
     height: 29px;
     text-align: center;
+    transition: width 0.4s ease-in-out;
+
 }
 #search-input:hover{
-    animation-direction: normal;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-name: searchscale;
+    width:55%  ;
 }
-@keyframes searchscale{
-    0%{
-        transform: scaleX(0);
-    }
-    100%{
-        transform: scaleX(20%);
-    }
+#search-button{
+    position: relative;
+    right: 37px;
+
 }
+
 #modalButton{
-
+    position: relative;
+    right: 32px;
 
 }
+.attribution{
+    position: relative;
+    float: left;
+}
+.attribution img{
+    position: fixed;
+    width: 8%;
 
+}
 
 
 
