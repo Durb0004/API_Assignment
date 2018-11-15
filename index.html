@@ -15,9 +15,16 @@
         <header class="search">
             <h1 class="recommendations">Movie Recommendations</h1>
             <div class="inputs">
-                <img id="back-button" data-src="img/caret.svg" class="iconic iconic-md hide" data-direction="left" alt="Back Button" title="Back" />
+               <div class="back-button-div-mainpage">
+                <img id="back-button-main" data-src="img/caret.svg" class="iconic iconic-md hide" data-direction="left" alt="Back Button" title="Back" />
+                </div>
+                <div class="back-button-div-searchresaults">
+                <img id="back-button-search" data-src="img/caret.svg" class="iconic iconic-md hide" data-direction="left" alt="Back Button" title="Back" />
+                </div>
                 <input type="text" id="search-input" placeholder="search" />
+                <div class="search-button-div">
                 <img id="search-button" class="iconic iconic-md" data-src="img/magnifying-glass.svg" alt="Search" title="Search" />
+                </div>
                 <div id="modalButton">
                     <img id="modalImage" data-src="img/settings.svg" class="iconic iconic-md" alt="Prefrences button" title="Back" />
                 </div>
@@ -40,7 +47,7 @@
             <h2>Choose your Preference</h2>
         </div>
         <div class="modal-radio">
-            <input type="radio" name="entertainment" value="movie" id="movie" checked>
+            <input type="radio" name="entertainment" value="movie" id="movie" >
             <label for="Movie">Movie</label>
 
             <input type="radio" name="entertainment" value="tv" id="tv">

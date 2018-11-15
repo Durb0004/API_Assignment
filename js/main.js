@@ -13,9 +13,33 @@ let imageURL = null;
 let imageSizes = [];
 
 function init() {
-    console.log(tmdbKey);
     addEventListeners();
     getLocalStorageData();
+    headerCheck();
+
+
+
+}
+function headerCheck(){
+     if(entertainmentType == "tv"){
+        document.querySelector(".recommendations").innerHTML = "Television Recommendations";
+    }else if(entertainmentType == "movie"){
+        document.querySelector(".recommendations").innerHTML = "Movie Recommendations";
+    }else{
+        document.querySelector(".recommendations").innerHTML = "Select Television or Movies from the preferences button";
+    }
+}
+
+function radioButtonCheck(){
+    if(entertainmentType == "movie"){
+        console.log("hi1");
+        document.querySelector("#movie").classList.add("checked");
+        document.querySelector("#tv").classList.remove("checked");
+    }else{
+        console.log("hi2")
+        document.querySelector("#movie").classList.remove("checked");
+        document.querySelector("#tv").classList.add("checked");
+    }
 }
 function addEventListeners(){
     document.querySelector("#modalButton").addEventListener("click", showOverlay);
@@ -29,12 +53,25 @@ function addEventListeners(){
         }
         hideOverlay(e);
         saveLocalStorageData();
+        if(entertainmentType == "tv"){
+        document.querySelector(".recommendations").innerHTML = "Television Recommendations";
+    }else if(entertainmentType == "movie"){
+        document.querySelector(".recommendations").innerHTML = "Movie Recommendations";
+    }
     });
-    document.querySelector("#search-button").addEventListener("click", function (){
-        document.querySelector(".recommendations").innerHTML = "Results 1-20 from a total of " + "some variable" +" for " + "another vairable";
-        document.querySelector(".search").style.translate= "translateY(-330px)";
+    document.querySelector(".search-button-div").addEventListener("click", function (){
+        document.querySelector("#back-button-main").classList.add("show");
+        document.querySelector("#back-button-main").classList.remove("hide");
+        document.querySelector(".recommendations").innerHTML = "Results 1-20 from a total of ";
+        document.querySelector(".inputs").style.transform= "translateY(-910%)";
 
 
+    });
+    document.querySelector(".back-button-div-mainpage").addEventListener("click", function (){
+        document.querySelector("#back-button-main").classList.remove("show");
+        document.querySelector("#back-button-main").classList.add("hide");
+        document.querySelector(".recommendations").innerHTML = "Movie Recommendations";
+        document.querySelector(".inputs").style.transform= "translateY(0%)";
     });
 
 }
@@ -64,6 +101,8 @@ function getLocalStorageData() {
             console.log(now);
         }else {
         console.log("date is not saved");
+
+
     }
 
     //check if image secure base url and sizes array are saved in local storage, if not call getPosterURLAndSizes()
@@ -88,6 +127,7 @@ function showModal(e) {
     let modal = document.querySelector(".modal");
     modal.classList.remove("off");
     modal.classList.add("on");
+
 }
 
 function hideOverlay(e) {
