@@ -63,7 +63,7 @@ function addEventListeners(){
         document.querySelector("#back-button-main").classList.add("show");
         document.querySelector("#back-button-main").classList.remove("hide");
         document.querySelector(".recommendations").innerHTML = "Results 1-20 from a total of ";
-        document.querySelector(".inputs").style.transform= "translateY(-910%)";
+        document.querySelector(".inputs").style.transform= "translateY(-900%)";
 
 
     });
