@@ -9,6 +9,7 @@
 
 <body>
     <main>
+
         <div class="attribution">
             <img src="img/293x302-powered-by-square-green-3ee4814bb59d8260d51efdd7c124383540fc04ca27d23eaea3a8c87bfa0f388d.png" alt="The Movie DB" />
         </div>
@@ -18,7 +19,7 @@
                <div class="back-button-div-mainpage">
                 <img id="back-button-main" data-src="img/caret.svg" class="iconic iconic-md hide" data-direction="left" alt="Back Button" title="Back" />
                 </div>
-                <div class="back-button-div-searchresaults">
+                <div class="back-button-div-searchresults">
                 <img id="back-button-search" data-src="img/caret.svg" class="iconic iconic-md hide" data-direction="left" alt="Back Button" title="Back" />
                 </div>
                 <input type="text" id="search-input" placeholder="search" />
@@ -31,15 +32,16 @@
             </div>
         </header>
 
-        <div class="page" id="search-results">
-            <section class="title"></section>
-            <section class="content"></section>
-        </div>
+        <div class="page hide" id="search-results">
+    <section class="title"></section>
+    <section class="content flex-container"></section>
+  </div>
 
-        <div class="page" id="recommend-results">
+        <div class="page hide" id="recommend-results">
             <section class="title"></section>
-            <section class="content"></section>
-        </div>
+            <section class="content flex-container"></section>
+  </div>
+        <h3 class="elapsedTime"></h3>
     </main>
     <div class="overlay hide">&nbsp;</div>
     <div class="modal">
@@ -47,7 +49,7 @@
             <h2>Choose your Preference</h2>
         </div>
         <div class="modal-radio">
-            <input type="radio" name="entertainment" value="movie" id="movie" >
+            <input type="radio" name="entertainment" value="movie" id="movie" checked >
             <label for="Movie">Movie</label>
 
             <input type="radio" name="entertainment" value="tv" id="tv">
