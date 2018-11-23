@@ -100,6 +100,12 @@ function addEventListeners() {
         document.querySelector("#recommend-results>.content").innerHTML = "";
 
     });
+    document.querySelector("#search-input").addEventListener("keypress", function (e){
+        let key = e.which || e.keyCode;
+        if(key ==   13){
+            startSearch();
+        }
+    });
 }
 
 function saveLocalStorageData() {
