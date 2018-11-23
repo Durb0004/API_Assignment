@@ -228,7 +228,7 @@ function moveSearch() {
 
     document.querySelector("#back-button-main").classList.add("show");
     document.querySelector("#back-button-main").classList.remove("hide");
-    document.querySelector(".inputs").style.transform = "translateY(-300%)";
+    document.querySelector(".inputs").style.transform = "translateY(-400%)";
     document.querySelector("#search-results").classList.remove("hide");
     document.querySelector("#search-results").classList.add("show");
     document.querySelector("main").style.height = "auto";
