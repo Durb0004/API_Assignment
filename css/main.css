@@ -190,6 +190,8 @@ ul{
 }
 
 .movieCard, .tvCard {
+    position: relative;
+    top: -190px;
     width: 50rem;
     height: auto;
     margin: 1rem auto;
@@ -198,6 +200,7 @@ ul{
     transition: transform 0.4s ease-in;
     text-align: center;
     box-shadow: 5px 5px hsla(100, 0%, 0%, 0.3);
+
 }
 
 .imageSection {
