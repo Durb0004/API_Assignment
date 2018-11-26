@@ -217,7 +217,13 @@ ul{
     margin-right: 1rem;
 }
 
-
+.modal-radio{
+    transition: transform 0.1s ease-in;
+}
+.modal-radio:hover{
+    transform: scale(1.4);
+    box-shadow: 0px 8px hsla(100, 0%, 0%, 0.3);
+}
 
 
 

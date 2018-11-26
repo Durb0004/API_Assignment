@@ -234,7 +234,7 @@ function moveSearch() {
 
     document.querySelector("#back-button-main").classList.add("show");
     document.querySelector("#back-button-main").classList.remove("hide");
-    document.querySelector(".inputs").style.transform = "translateY(-400%)";
+    document.querySelector(".inputs").style.transform = "translateY(-500%)";
     document.querySelector("#search-results").classList.remove("hide");
     document.querySelector("#search-results").classList.add("show");
     document.querySelector("main").style.height = "auto";
@@ -268,11 +268,8 @@ function getSearchResults(searchString) {
 
 
             //  create the page from data
-
-
             if(entertainmentType == "movie"){
             data.results.forEach(function (item) {
-
 
                let movie = {
                     title: item.original_title,
@@ -344,7 +341,7 @@ function getSearchResults(searchString) {
 
 
 
-            document.querySelector(".recommendations").innerHTML=("Search Results 1 - " + data.results.length);
+            document.querySelector(".recommendations").innerHTML=("Search Results 1 - " + data.results.length + " of a possible " + data.total_results +"<br> Click a title to get recommendations");
 
 
 
