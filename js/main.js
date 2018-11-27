@@ -1,3 +1,6 @@
+
+let Durb0004 = (function() {
+
 /*globals tmdbKey*/
 
 
@@ -100,11 +103,15 @@ function addEventListeners() {
         document.querySelector("#recommend-results>.content").innerHTML = "";
 
     });
-    document.querySelector("#search-input").addEventListener("keypress", function (e){
+    document.querySelector("body").addEventListener("keypress", function (e){
         let key = e.which || e.keyCode;
         if(key ==   13){
             startSearch();
         }
+
+
+
+
     });
 }
 
@@ -235,6 +242,7 @@ function moveSearch() {
     document.querySelector("#back-button-main").classList.add("show");
     document.querySelector("#back-button-main").classList.remove("hide");
     document.querySelector(".inputs").style.transform = "translateY(-500%)";
+
     document.querySelector("#search-results").classList.remove("hide");
     document.querySelector("#search-results").classList.add("show");
     document.querySelector("main").style.height = "auto";
@@ -253,6 +261,10 @@ function startSearch() {
     // this is a new search so you should reset any existing page data
     document.querySelector("#search-results>.content").innerHTML = "";
     document.querySelector("#recommend-results>.content").innerHTML = "";
+    document.querySelector("#back-button-main").classList.add("show");
+    document.querySelector("#back-button-main").classList.remove("hide");
+    document.querySelector("#back-button-search").classList.remove("show");
+    document.querySelector("#back-button-search").classList.add("hide");
     moveSearch();
     getSearchResults(searchString);
 }
@@ -540,3 +552,4 @@ function getRecommendations(e) {
         .catch(error => console.log(error));
 
 }
+})();

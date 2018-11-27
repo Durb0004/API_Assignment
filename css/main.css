@@ -126,6 +126,10 @@ main{
     width: 100%;
 
 }
+.control{
+    position: relative;
+    top: -180px;
+}
 .inputs{
     display: flex;
     flex-direction: row;
