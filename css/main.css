@@ -14,7 +14,12 @@ body{
     background: rgba(0,0,0,0.8);
     cursor: pointer;
 }
-
+h1, h2{
+    font-family:  'Merriweather', Times New Roman,  serif;
+}
+p{
+    font-family: 'Noto Sans TC', Arial,  sans-serif;
+}
 .modal {
     transform: translateY(-400%);
     position: fixed;
