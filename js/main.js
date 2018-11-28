@@ -44,11 +44,9 @@ function headerCheck() {
 
 function radioButtonCheck() {
     if (entertainmentType == "movie") {
-        console.log("hi1");
         document.querySelector("#movie").classList.add("checked");
         document.querySelector("#tv").classList.remove("checked");
     } else {
-        console.log("hi2")
         document.querySelector("#movie").classList.remove("checked");
         document.querySelector("#tv").classList.add("checked");
     }
@@ -129,7 +127,6 @@ function getLocalStorageData() {
     if (localStorage.getItem(entertainmentKey)) {
 
         entertainmentType = JSON.parse(localStorage.getItem(entertainmentKey));
-        console.log(entertainmentType);
     } else {
         console.log("entertainment type is not saved");
     }
@@ -175,7 +172,6 @@ function saveDateToLocalStorage() {
 }
 function calculateElapsedTime(savedDate) {
   let now = new Date(); // get the current time
-  console.log(now);
 
   // calculate elapsed time
   let elapsedTime = now.getTime() - savedDate.getTime(); // this in milliseconds
@@ -226,11 +222,9 @@ function getPosterURLAndSizes() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
             imageURL = data.images.secure_base_url;
             imageSizes = data.images.poster_sizes;
 
-            console.log(imageSizes, imageURL);
         })
         .catch((error) => {
             console.log(error);
@@ -250,7 +244,6 @@ function moveSearch() {
 }
 
 function startSearch() {
-    console.log("start search");
     searchString = document.getElementById("search-input").value;
     if (!searchString) {
         alert("Please enter search data");
@@ -454,12 +447,10 @@ function createTvCard(tv) {
 
 function getRecommendations(e) {
 
-    console.log(this);
-    console.log(e.target);
+
     let movieTitle = this.getAttribute("data-title");
     let entID = this.getAttribute("ent-ID");
-    console.log("you clicked: " + movieTitle + " with a movie id of " + entID);
-    //https://api.themoviedb.org/3/movie/{movie_id}/recommendations?api_key=
+
     document.querySelector("#search-results").classList.add("hide");
     document.querySelector("#search-results").classList.remove("show");
     document.querySelector("#recommend-results").classList.remove("hide");
