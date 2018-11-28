@@ -392,7 +392,7 @@ function createMovieCard(movie) {
 
     // append elements
     section.appendChild(image);
-    image.setAttribute("Alt", "Missing movie poster");
+    image.setAttribute("Alt", "Missing movie poster of " + movie.title);
     movieCard.appendChild(section);
     movieCard.appendChild(videoTitle);
     movieCard.appendChild(videoDate);
@@ -432,7 +432,7 @@ function createTvCard(tv) {
 
     // append elements
     section.appendChild(image);
-    image.setAttribute("Alt", "Missing TV poster");
+    image.setAttribute("Alt", "Missing TV poster of " + tv.title);
     tvCard.appendChild(section);
     tvCard.appendChild(videoTitle);
     tvCard.appendChild(videoDate);
